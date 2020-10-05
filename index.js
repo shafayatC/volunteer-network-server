@@ -75,6 +75,4 @@ client.connect(err => {
 
 
 
-app.listen('4000', ()=> {
-    console.log("app listen");
-})
+app.listen(process.env.PORT || '4000')
