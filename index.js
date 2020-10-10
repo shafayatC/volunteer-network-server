@@ -24,8 +24,7 @@ client.connect(err => {
         console.log(reg.body);
         eventCollection.insertOne(addEvent)
         .then(function(result) {
-          console.log("insert sucessfull");  
-          res.send(result.insertedCount);
+          res.send(result.insertedCount > 0);
         })
     })
     
